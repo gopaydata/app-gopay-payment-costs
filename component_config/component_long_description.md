@@ -1,0 +1,1 @@
+GoPay Payment COSTs calculation long description

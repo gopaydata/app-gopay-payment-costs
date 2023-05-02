@@ -1,5 +1,5 @@
 # app-gopay-payment-cost #
-https://bitbucket.org/gopayreporting/app-gopay-payment-cost/
+https://github.com/gopaydata/app-gopay-payment-costs
 
 *Aplikace, která přepočítává COSTs pro jednotlivé platby*
 

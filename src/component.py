@@ -30,6 +30,10 @@ class Component(ComponentBase):
         Main execution code
         """
 
+        # logging setup
+        logging.basicConfig(level=logging.DEBUG, stream=sys.stdout, datefmt='%Y-%m-%d %H:%M:%S%z',
+                            format='%(asctime)s | %(module)s | %(levelname)s | %(message)s')
+
         # check for missing configuration parameters
         params = self.configuration.parameters
 
@@ -41,10 +45,6 @@ class Component(ComponentBase):
         logging.info(out_table_path)
 
         from lib import config, fee, payment, rate
-
-        # logging setup
-        logging.basicConfig(level=logging.DEBUG, stream=sys.stdout, datefmt='%Y-%m-%d %H:%M:%S%z',
-                            format='%(asctime)s | %(module)s | %(levelname)s | %(message)s')
 
         # loading cost fee definitions
         fees = fee.Fees('/data/in/tables/payment_fees.csv').get_fees()

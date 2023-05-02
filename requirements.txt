@@ -3,4 +3,3 @@ keboola.utils
 keboola.http-client
 mock
 freezegun
-logging

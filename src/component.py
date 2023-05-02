@@ -10,6 +10,9 @@ import sys
 from keboola.component.base import ComponentBase
 from keboola.component.exceptions import UserException
 
+# logging setup
+logging.basicConfig(level=logging.DEBUG, stream=sys.stdout, datefmt='%Y-%m-%d %H:%M:%S%z',
+                            format='%(asctime)s | %(module)s | %(levelname)s | %(message)s')
 
 class Component(ComponentBase):
     """
@@ -29,11 +32,7 @@ class Component(ComponentBase):
         """
         Main execution code
         """
-
-        # logging setup
-        logging.basicConfig(level=logging.DEBUG, stream=sys.stdout, datefmt='%Y-%m-%d %H:%M:%S%z',
-                            format='%(asctime)s | %(module)s | %(levelname)s | %(message)s')
-
+        
         # check for missing configuration parameters
         params = self.configuration.parameters
 
